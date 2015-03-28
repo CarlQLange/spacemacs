@@ -429,7 +429,7 @@ argument takes the kindows rotate backwards."
                   (string-match "nosetests" (buffer-name)))
 
          ;;no errors, make the compilation window go away in 0.5 seconds
-         (delete-windows-on buf)
+         ;(delete-windows-on buf) ;removed this because it was annoying :(
          (message "compilation ok.")))))
 
 ;; from https://gist.github.com/timcharper/493269

@@ -1,4 +1,4 @@
-;;; packages.el --- Python Layer packages File for Spacemacs
+;; packages.el --- Python Layer packages File for Spacemacs
 ;;
 ;; Copyright (c) 2012-2014 Sylvain Benner
 ;; Copyright (c) 2014-2015 Sylvain Benner & Contributors
@@ -222,16 +222,16 @@ which require an initialization must be listed explicitly in the list.")
                                                        buffer-file-name)))
             (compile compile-command t)
             (with-current-buffer (get-buffer "*compilation*")
-              (inferior-python-mode))))
+              (inferior-python-mode)
+              (evil-normal-state))))
 
       (defun spacemacs/python-execute-file-focus (arg)
-        "Execute a python script in a shell and switch to the shell buffer in
-`insert state'."
+        "Execute a python script in a shell and switch to the shell buffer"
         (interactive "P")
         (spacemacs/python-execute-file arg)
         (switch-to-buffer-other-window "*compilation*")
         (end-of-buffer)
-        (evil-insert-state))
+        (evil-normal-state))
 
       (evil-leader/set-key-for-mode 'python-mode
         "mcc" 'spacemacs/python-execute-file
