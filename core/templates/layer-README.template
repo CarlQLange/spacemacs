@@ -1,24 +1,28 @@
-# LAYER contribution layer for Spacemacs
+* %LAYERNAME% contribution layer for Spacemacs
 
-![logo](img/LAYER.png)
+#+CAPTION: logo
 
-;; Generate TOC here, use the commande `markdown-toc/generate-toc`
+[[img/%LAYERNAME%.png]]
 
-## Description
+** Table of Contents                                                  :TOC@4:
+ - [[#layername-contribution-layer-for-spacemacs][%LAYERNAME% contribution layer for Spacemacs]]
+     - [[#description][Description]]
+     - [[#install][Install]]
+     - [[#key-bindings][Key bindings]]
 
-This layer does wondeful things:
-- thing01
+** Description
+This layer does wonderful things:
+  - thing01
 
-## Install
+** Install
+To use this contribution add it to your =~/.spacemacs=
 
-To use this contribution add it to your `~/.spacemacs`
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(%LAYERNAME%))
+#+end_src
 
-```elisp
-(setq-default dotspacemacs-configuration-layers '(LAYER))
-```
+** Key bindings
 
-## Key bindings
-
-Key Binding   | Description
---------------|------------------------------------------------------------
-`<SPC> x x x` | Does thing01
+| Key Binding     | Description    |
+|-----------------+----------------|
+| ~<SPC> x x x~   | Does thing01   |
